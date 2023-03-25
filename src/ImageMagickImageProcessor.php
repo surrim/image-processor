@@ -21,10 +21,7 @@ class ImageMagickImageProcessor extends ImageProcessor {
      * @throws ImagickException
      */
     function getSize(): array {
-        $size = $this->image->getSize();
-        $width = $size['columns'];
-        $height = $size['rows'];
-        return [$width, $height];
+        return [$this->image->getImageWidth(), $this->image->getImageHeight()];
     }
 
     /**

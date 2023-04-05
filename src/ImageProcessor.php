@@ -6,14 +6,14 @@ abstract class ImageProcessor {
 
     public function getAspectRatio() {
         [$width, $height] = $this->getSize();
-        $gcd = static::gcd($width, $height);
+        $gcd = self::gcd($width, $height);
         return ($width / $gcd) . ' / ' . ($height / $gcd);
     }
 
     public abstract function getSize(): array;
 
     private static function gcd($x, $y) {
-        return $y ? static::gcd($y, $x % $y) : $x;
+        return $y ? self::gcd($y, $x % $y) : $x;
     }
 
     public abstract function resize(int $size): ImageProcessor;

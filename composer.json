@@ -3,11 +3,6 @@
   "description": "Processes images with GD and/or ImageMagick",
   "type": "library",
   "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "Surrim\\ImageProcessor\\": "src/"
-    }
-  },
   "authors": [
     {
       "name": "surrim",
@@ -15,6 +10,11 @@
       "homepage": "https://surrim.org"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "Surrim\\ImageProcessor\\": "src/"
+    }
+  },
   "minimum-stability": "stable",
   "require": {
     "php": ">=8.1"
